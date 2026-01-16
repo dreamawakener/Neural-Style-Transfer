@@ -13,8 +13,10 @@ import torch.nn.functional as F
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 
-content_name = "WestGate.jpg"
+content_name = "Teaching Building1.jpg"
 style_name = "starry_night.jpg"
+# content_name = "WestGate.jpg"
+# style_name = "candy.jpg"
 
 # 路径保持一致
 content_path = f"images/contents/{content_name}"

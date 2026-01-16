@@ -13,8 +13,10 @@ import torch.nn.functional as F
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 
-content_name = "WestGate.jpg"
+content_name = "Teaching Building1.jpg"
 style_name = "starry_night.jpg"
+# content_name = "WestGate.jpg"
+# style_name = "candy.jpg"
 
 content_img = Image.open(f"images/contents/{content_name}").convert("RGB")
 style_img = Image.open(f"images/styles/{style_name}").convert("RGB")
@@ -142,7 +144,7 @@ tv_weight = 1
 # =========================
 # 训练
 # =========================
-num_epochs = 1000
+num_epochs = 800
 
 for epoch in range(num_epochs):
     optimizer.zero_grad()
